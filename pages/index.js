@@ -35,9 +35,9 @@ export default function Home({ categories, products }) {
 export const getStaticProps = wrapper.getStaticProps(store =>
   async () => {
     let categories = await store.dispatch(getAllCategories.initiate());
-    console.log(categories)
+    
     let products = await store.dispatch(getAllProducts.initiate());
-    console.log(products)
+    
 
     await Promise.all(getRunningOperationPromises());
     

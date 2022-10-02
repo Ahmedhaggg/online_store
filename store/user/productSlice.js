@@ -8,7 +8,7 @@ export const productSlice = UserApiSlice.injectEndpoints({
                 method: "GET",
                 url: "products",
                 headers: {
-                    Origin: env.URL
+                    Origin: env.URI
                 }
             })
         }),
@@ -17,7 +17,7 @@ export const productSlice = UserApiSlice.injectEndpoints({
                 method: "GET",
                 url: `products/${id}`,
                 headers: {
-                    Origin: env.URL
+                    Origin: env.URI
                 }
             })
         })

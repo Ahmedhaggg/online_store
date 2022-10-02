@@ -25,7 +25,7 @@ export default function Category({ category }) {
 export const getStaticPaths = async () => {
   const request = await fetch(env.API_URL + "categories", {
     headers: {
-      Origin: "http://localhost:3000"
+      Origin: env.URI
   }
   });
 

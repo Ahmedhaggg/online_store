@@ -1,6 +1,7 @@
 import { UserApiSlice } from "./userApiSlice";
 import cookies from "../../services/cookies"
 import { userTokenKey } from "../../services/cookies/cookies_keys"
+import { env } from "../../next.config";
 
 export const notificationSlice = UserApiSlice.injectEndpoints({
     endpoints: builder => ({
@@ -19,7 +20,7 @@ export const notificationSlice = UserApiSlice.injectEndpoints({
                 url: "orders/" + id,
                 headers: {
                     'authorization': userToken,
-                    Origin: "http://localhost:3000"
+                    Origin: env.URI
                 }
             })
         })

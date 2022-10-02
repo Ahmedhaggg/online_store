@@ -8,7 +8,7 @@ export const categorySlice = UserApiSlice.injectEndpoints({
                 method: "GET",
                 url: "categories",
                 headers: {
-                    Origin: env.URL
+                    Origin: env.URI
                 }
             })
         }),
@@ -17,7 +17,7 @@ export const categorySlice = UserApiSlice.injectEndpoints({
                 method: "GET",
                 url: `categories/${title}`,
                 headers: {
-                    Origin: env.URL
+                    Origin: env.URI
                 }
             })
         })
