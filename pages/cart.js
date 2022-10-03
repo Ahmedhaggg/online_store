@@ -4,7 +4,6 @@ import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import CartProducts from "../components/user/cart/CartProducts";
 import CartTotal from "../components/user/cart/CartTotal"
-import cookies from "../services/cookies";
 import { deleteCart } from "../store/user/cart";
 
 export default function Cart() {

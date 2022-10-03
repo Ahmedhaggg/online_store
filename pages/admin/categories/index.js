@@ -1,11 +1,8 @@
 import React, { useEffect } from "react";
-import { wrapper } from "../../../store/admin";
-import { getAllCategories, getRunningOperationPromises, useGetAllCategoriesQuery } from "../../../store/admin/categories";
+import {  useGetAllCategoriesQuery } from "../../../store/admin/categories";
 import SectionHeader from "../../../components/admin/SectionHeader"
 import { Alert, Box, Grid } from "@mui/material";
-import Link from "next/link";
 import CategoriesTable from "../../../components/admin/categories/CategoriesTable";
-import CustomLink from "../../../components/admin/CustomLink";
 import CustomLinkButton from "../../../components/admin/CustomLinkButton";
 import PageLoading from "../../../components/PageLoading";
 import { useRouter } from "next/router";
