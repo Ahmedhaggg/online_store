@@ -27,7 +27,8 @@
       "jsx": true // enable linting for jsx files
     },
     "ecmaVersion": 11,
-    "sourceType": "module"
+    "sourceType": "module",
+    "allowImportExportEverywhere": true
   },
   "settings": {
     "react": {
