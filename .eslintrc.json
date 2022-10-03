@@ -1,4 +1,3 @@
 {
-  "extends": "plugin:@next/next/recommended",
-  "parser": "babel-eslint"
+  "extends": "plugin:@next/next/recommended"
 }
