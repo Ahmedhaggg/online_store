@@ -30,7 +30,13 @@ export const getStaticPaths = async () => {
   });
 
   let categories = await request.json();
-  
+ 
+  if (categories.success == false) 
+    return {
+      paths: [],
+      fallback: true
+    }
+
   let paths = categories.categories.map(category => {
     return {
       params: { slug: category.title.split("-").join(" ").replace(/\w\S*/g, (text) => text.toLowerCase()), title: category.title }
@@ -39,7 +45,7 @@ export const getStaticPaths = async () => {
   
   return{
     paths,
-    fallback: false
+    fallback: true
   }
 }
 
@@ -65,26 +71,3 @@ export const getStaticProps = wrapper.getStaticProps(store =>
   }
 )
 
-// export const getServerSideProps = wrapper.getServerSideProps(store =>
-//   async (context) => {
-//     console.log(context.req);
-//     let { slug } = context.params;
-//     let { data, isSuccess, error } = await store.dispatch(getCategory.initiate(slug));
-//     await Promise.all(getRunningOperationPromises());
-
-//     console.log("errordddddddddddddddddddddddddddddddddd", error)
-//     if (!isSuccess)
-//       return {
-//         redirect: {
-//           destination: "/",
-//           permanent: true
-//         }
-//       }
-//     console.log(context)
-//     return {
-//       props: {
-//         category: data.category
-//       }
-//     }
-//   }
-// )
