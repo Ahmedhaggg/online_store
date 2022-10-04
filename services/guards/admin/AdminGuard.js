@@ -21,7 +21,7 @@ export default function AdminGuard({ children }) {
             router.push("/admin/login")
         } else {
             // socket connect
-            const socketIo = io(env.URI, { auth: { token: cookies.get(adminTokenKey) } });
+            const socketIo = io(env.SERVER_URL, { auth: { token: cookies.get(adminTokenKey) } });
 
             // dispatch socket
             dispatch(addSocket({ socket: socketIo }));

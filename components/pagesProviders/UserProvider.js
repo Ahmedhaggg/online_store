@@ -21,7 +21,7 @@ function UserProvider({ children }) {
 
     useEffect(() => {
         if (token) {
-            const socketIo = io(env.URI, { auth: { token: token } });
+            const socketIo = io(env.SERVER_URL, { auth: { token: token } });
             dispatch(addSocket({ socket: socketIo }));
 
             socketIo.emit("newUser", { userId: userId })
