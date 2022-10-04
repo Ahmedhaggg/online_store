@@ -43,10 +43,7 @@ export const getStaticProps = wrapper.getStaticProps(store =>
     
     if (!products.isSuccess || !categories.isSuccess)
       return {
-        redirect: {
-          destination: "/404",
-          permanent: true
-        }
+        notFound: true
       }
 
     return {
