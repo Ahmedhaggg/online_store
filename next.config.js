@@ -2,9 +2,9 @@ const nextConfig = {
   reactStrictMode: false,
   swcMinify: true,
   env: {
-    API_URL: "http://localhost:4000/api/",
-    IMAGE_URL: "http://localhost:4000/uploads/",
-    URI: "http://localhost:3000"
+    API_URL: "https://small-ecommerce-api.herokuapp.com/api/",
+    IMAGE_URL: "https://small-ecommerce-api.herokuapp.com/uploads/",
+    URI: "https://small-ecommerce-api.herokuapp.com"
   }
 }
 
