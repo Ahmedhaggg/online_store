@@ -42,34 +42,18 @@ export default function Home({ categories }) {
  
 export const getStaticProps = async (_context) => {
     let selectedCategoriesSlugs = ["laptops", "phones", "playstations"];
-    let [laptops, phones, playstations] = await Promise.all(
+    let fetchCategoriesResults = await Promise.all(
         selectedCategoriesSlugs.map(categorySlug => 
           fetchData("v1/categories/" + categorySlug)
         ));
-
-    if (laptops.isError || phones.isError || playstations.isError)
-          return {
-            notFound: true, revalidate: 1
-          }
  
-    let categories = [
-      {
-        title: "laptops",
-        products: laptops.data.category.products
-      },
-      {
-        title: "phones",
-        products: phones.data.category.products
-      },
-      {
-        title: "playstations",
-        products: playstations.data.category.products
-      }
-    ]
+    let successededCategories = fetchCategoriesResults
+      .filter(categoryResult => categoryResult.isError === false)
+      .map(succededCategory => succededCategory.data.category);
     
     return {
       props: {
-        categories
+        categories: successededCategories
       },
       revalidate: 60 * 60 
     }
