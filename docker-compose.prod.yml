@@ -1,0 +1,11 @@
+version: '2'
+services:
+  ecommerce_client:
+    build: 
+      context: "./client"
+      args:
+        - NODE_ENV=production
+    command: >
+        sh -c "npm run build && npm run start"
+volumes:
+  images:
