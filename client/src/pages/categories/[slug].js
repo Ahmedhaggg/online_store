@@ -30,8 +30,8 @@ export default function Category({ category }) {
 
 
 export const getStaticPaths = async () => {
-    let { data, isError } = await fetchData("v1/categories/") 
-    console.log(data, isError , "checkeeeeeeeeeeeee")
+    let { data, isError } = await fetchData("v1/categories") 
+
     let paths = isError ? [] : data.categories.map(category => ({ 
       params: { slug: category.slug} 
     }))
@@ -51,7 +51,7 @@ export const getStaticProps = async ({ params }) => {
     
     return {
         props: {
-          categories: data.category
+          category: data.category
         },
         revalidate: 60 * 60 * 24
     }
