@@ -3,11 +3,11 @@ const nextConfig = {
   swcMinify: true,
   output: "standalone",
   env: {
-      SERVER_URL: "http://35.174.165.140/api/",
-      API_URL: "http://35.174.165.140/api/",
-      IMAGE_URL: `http://35.174.165.140/api/images`,
+      SERVER_URL: "https://elcto-server.onrender.com/api/",
+      API_URL: "https://elcto-server.onrender.com/api/",
+      IMAGE_URL: `https://elcto-server.onrender.com/api/images`,
       URI: "http://localhost:3000",
-      SSE_SERVER_URL: "http://35.174.165.140/api/",
+      SSE_SERVER_URL: "https://elcto-server.onrender.com/api/",
       STRIPE_KEY: "pk_test_51HkkefDHNiYh4mtD5GwpaFvauahMirEbeTrkxR8AeNHRPr7T1hcOE7VhJk0zeEyGv3nN8gGKQaBPFhJeTl9w5DHJ00ayh57RyD" 
   },
   webpack: (config, context) => {
