@@ -2,6 +2,7 @@ const nextConfig = {
   reactStrictMode: false,
   swcMinify: true,
   output: "standalone",
+  staticPageGenerationTimeout: 1000,
   env: {
       SERVER_URL: "https://elcto-server.onrender.com/api/",
       API_URL: "https://elcto-server.onrender.com/api/",
