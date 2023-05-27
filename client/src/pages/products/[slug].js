@@ -25,7 +25,7 @@ export default function show({ product }) {
                     <CardMedia
                         component="img"
                         height="300"
-                        image={`${env.IMAGE_URL}/${product.image}`}
+                        image={product.image}
                         alt={product.title}
                     />
                 </Grid>
@@ -60,8 +60,9 @@ export default function show({ product }) {
 
 
 export const getServerSideProps = async ({params}) => {
+    console.log('getServerSideProps', params)
     let { data, isError } = await fetchData("v1/products/" + params.slug);
-
+    console.log(data)
     if (!isError)
         return {
             props: {

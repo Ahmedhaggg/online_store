@@ -39,8 +39,8 @@ export default function products() {
                             searchResult.products.length ?
                                 <Grid container>
                                     {
-                                        searchResult.products.map((product) => (
-                                            <Grid item xs={12} md={6} lg={4}>
+                                        searchResult.products.map((product, index) => (
+                                            <Grid item xs={12} md={6} lg={4} key={index}>
                                                 <ProductItem product={product} />
                                             </Grid>
                                         ))

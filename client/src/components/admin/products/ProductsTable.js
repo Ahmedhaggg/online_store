@@ -26,7 +26,7 @@ export default function ProductsTable({ rows }) {
                         <TableRowStyle key={row._id}>
                             <TableCellStyle component="th" scope="row">
                                 <img
-                                    src={`${env.IMAGE_URL}/${row.image}?w=164&h=164&fit=crop&auto=format`}
+                                    src={row.image}
                                     alt={row.title}
                                     loading="lazy"
                                     width="40px"

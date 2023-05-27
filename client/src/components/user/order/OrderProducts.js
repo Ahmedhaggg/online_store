@@ -11,7 +11,7 @@ export default function OrderProducts({ orderProducts }) {
                     <Grid item xs={12} md={4}>
                         <Box height="100%" sx={{ display: "flex", justifyContent: "center", alignItems: "center", paddingTop: { xs: 3, md: 0 } }}>
                             <img
-                                src={`${env.IMAGE_URL}/${orderItem.product.image}?w=164&h=164&fit=crop&auto=format`}
+                                src={orderItem.product.image}
                                 alt={orderItem.product.image}
                                 loading="lazy"
                                 width="160px"

@@ -13,9 +13,9 @@ export default function ProductItem({ product }) {
             <CardActionArea sx={{ display: "flex", flexDirection: "column", justifyContent: "center" }}>
                 <CardMedia
                     component="img"
-                    image={`${env.IMAGE_URL}/${product.image}`}
+                    image={product.image}
                     alt={product.title}
-                    sx={{ maxWidth: "250px", height: "200px", display: "flex", justifyContent: "center" }}
+                    sx={{ display: "flex", justifyContent: "center" }}
                 />
                 <CardContent sx={{ textAlign: "left", width: "100%", marginTop: 2, height: "80px" }}>
                     <Typography gutterBottom variant="p" component="div" fontSize="fontSizes.regular">
