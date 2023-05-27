@@ -1,11 +1,10 @@
 import { Box } from "@mui/material";
 import NextLink from "next/link";
 import { Link } from "@mui/material";
-import React, { useState } from "react";
+import React from "react";
 import errorImage from "../assets/404-pages.jpg";
 import { useRouter } from "next/router";
 export default function NotFound() {
-    // let [visitor, setVisitor] = useState("user")
     let router = useRouter()
     let visitor = router.asPath.split("/")[1]
     
