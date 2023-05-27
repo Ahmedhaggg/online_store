@@ -3,6 +3,7 @@ const nextConfig = {
   swcMinify: true,
   output: "standalone",
   staticPageGenerationTimeout: 30000,
+  apiTimeout: 25000,
   env: {
       SERVER_URL: "https://elcto-server.onrender.com/api/",
       API_URL: "https://elcto-server.onrender.com/api/",
