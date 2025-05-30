@@ -5,11 +5,11 @@ const nextConfig = {
   staticPageGenerationTimeout: 30000,
   apiTimeout: 25000,
   env: {
-      SERVER_URL: "https://elcto-server.onrender.com/api/",
-      API_URL: "https://elcto-server.onrender.com/api/",
-      IMAGE_URL: `https://elcto-server.onrender.com/api/images`,
+      SERVER_URL: "https://ecommerceelcto-production.up.railway.app/api/",
+      API_URL: "https://ecommerceelcto-production.up.railway.app/api/",
+      IMAGE_URL: `https://ecommerceelcto-production.up.railway.app/api/images`,
       URI: "http://localhost:3000",
-      SSE_SERVER_URL: "https://elcto-server.onrender.com/api/",
+      SSE_SERVER_URL: "https://ecommerceelcto-production.up.railway.app/api/",
       STRIPE_KEY: "pk_test_51HkkefDHNiYh4mtD5GwpaFvauahMirEbeTrkxR8AeNHRPr7T1hcOE7VhJk0zeEyGv3nN8gGKQaBPFhJeTl9w5DHJ00ayh57RyD" 
   },
   webpack: (config, context) => {
